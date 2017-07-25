@@ -139,7 +139,11 @@ angular.module('ui.bootstrap.position', [])
           originalRight: paddingRight,
           heightOverflow: scrollParent.scrollHeight > scrollParent.clientHeight,
           bottom: paddingBottom + scrollbarWidth,
-          originalBottom: paddingBottom
+          originalBottom: paddingBottom,
+          bottomScrollbar: (elemStyle.overflowX == 'auto' || elemStyle.overflowX == 'visible' && elem.nodeName == 'BODY')
+            && scrollParent.scrollWidth > scrollParent.clientWidth || elemStyle.overflowX == 'scroll',
+          rightScrollbar: (elemStyle.overflowY == 'auto' || elemStyle.overflowY == 'visible' && elem.nodeName == 'BODY')
+            && scrollParent.scrollHeight > scrollParent.clientHeight || elemStyle.overflowY == 'scroll'
          };
       },
 
