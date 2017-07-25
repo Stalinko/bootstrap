@@ -288,7 +288,7 @@ angular.module('ui.bootstrap.dropdown', ['ui.bootstrap.multiMap', 'ui.bootstrap.
         css.left = 'auto';
         scrollbarPadding = $position.scrollbarPadding(appendTo);
 
-        if (scrollbarPadding.heightOverflow && scrollbarPadding.scrollbarWidth) {
+        if (scrollbarPadding.rightScrollbar && scrollbarPadding.scrollbarWidth) {
           scrollbarWidth = scrollbarPadding.scrollbarWidth;
         }
 
